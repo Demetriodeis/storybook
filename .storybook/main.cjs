@@ -14,5 +14,12 @@ module.exports = {
   },
   "features": {
     "storyStoreV7": true
+  },
+  viteFinals: (config, {configType}) => {
+    if(configType === 'PRODUCTON'){
+      config.base = '/storybook'
+    }
+
+    return config
   }
 }
